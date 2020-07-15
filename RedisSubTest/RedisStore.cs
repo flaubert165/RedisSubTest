@@ -10,6 +10,7 @@ namespace RedisSubTest
         static RedisStore()
         {
             var configurationOptions = ConfigurationOptions.Parse("localhost:7000");
+            configurationOptions.Password = "test";
             configurationOptions.KeepAlive = 10;
             configurationOptions.SyncTimeout = 500;
             configurationOptions.AllowAdmin = true;
